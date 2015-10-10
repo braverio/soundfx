@@ -4,22 +4,22 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Localhackday : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/soundboard.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
 
     <title>Soundboard</title>
     </head>
     <body>
     <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
+        <button type="button" onclick="playAudio('overtime')">overtime</button>
+        <button type="button" onclick="playAudio('how')">i cry</button>
         <audio>
             Your browser does not support audio tags.
         </audio>
-        <audio controls loop>
+        <audio loop id="overtime">
             <source src="audio/Overtime.mp3" type="audio/mp3">
         </audio>
-        <audio controls loop>
+        <audio loop id="how">
             <source src="audio/how.mp3" type="audio/mp3">
         </audio>
       </section>
