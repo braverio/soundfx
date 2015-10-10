@@ -11,24 +11,34 @@
     <body>
     <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
+        <div id="continuousMusic">
         <button type="button" onclick="playAudio('overtime')">overtime</button>
         <button type="button" onclick="playAudio('how')">i cry</button>
-        <button type="button" onclick="playAudio('meme')">nice meme</button>
         <button type="button" onclick="playAudio('eecs')">eecs</button>
+        </div>
+        
+        <div id="beatHits">
+        <button type="button" onclick="playAudio('meme')">nice meme</button>
+        </div> 
+        
         <audio>
             Your browser does not support audio tags.
         </audio>
+        
+        <!-- Continuous Music -->
         <audio loop id="overtime">
             <source src="audio/Overtime.mp3" type="audio/mp3">
         </audio>
         <audio loop id="how">
             <source src="audio/how.mp3" type="audio/mp3">
         </audio>
-        <audio loop id="meme">
-            <source src="audio/nicememe.mp3" type="audio/mp3">
-        </audio>
         <audio loop id="eecs">
             <soruce src="audio/eecs.mp3" type="audio/mp3"></soruce>
+        </audio>
+        
+        <!-- Beat hits -->
+        <audio id="meme">
+            <source src="audio/nicememe.mp3" type="audio/mp3">
         </audio>
       </section>
     </div>    

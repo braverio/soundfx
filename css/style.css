@@ -371,7 +371,6 @@ Full-Width Styles
 button{
     color: #ffffff;
     font-size: 30px;
-    background: #8e44ad;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     transition: background 0.25s;
@@ -379,10 +378,25 @@ button{
 }
 
 button:hover{
-    background: #683280;
     text-decoration: none;
 }
 
+#continuousMusic button{
+    background: #8e44ad;
+}
+
+#continuousMusic button:hover{
+    background: #683280;
+}
+
+#beatHits button{
+    background: #2980b9;
+}
+
+#beatHits button:hover{
+    background: #1f608c;
+    
+}
 
 /*******************************************************************************
 Small Device Styles
