@@ -1,6 +1,10 @@
-var userTempo = document.getElementById("userTempo");
-var tempo = userTempo.getAttribute("value");
-console.log(tempo);
+$(document).ready(function(){
+    var userTempo = document.getElementById("userTempo");
+    var tempo = userTempo.getAttribute("value");
+    console.log(tempo);
+});
+
+
 
 function playAudio(id){
     var audio = document.getElementById(id);
