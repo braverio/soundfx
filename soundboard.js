@@ -1,6 +1,5 @@
 $(document).ready(function(){
-    var userTempo = document.getElementById("userTempo");
-    var GlobalTempo = userTempo.getAttribute("value");
+    var userTempo = document.getElementById("userTempo").getAttribute("value");
     //Not sure if that works
     var audioFiles = document.getElementById("continuousMusic").children;
     //Or this
@@ -21,8 +20,7 @@ function playAudio(id){
 }
 
 function setPlayBackRate(element){
-    var audio = element;
-    var originalTempo = audio.dataset.tempo;
-    var playbackSpeed = GlobalTempo/originalTempo;
+    var originalTempo = $(element).data('tempo');
+    var playbackSpeed = ulobalTempo/originalTempo;
     audio.playbackRate = playbackSpeed;
 }
