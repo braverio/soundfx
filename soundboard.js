@@ -31,9 +31,11 @@ function setPlayBackRate(element){
 function loopAudio(id){
 	var audio = document.getElementById(id);
 	if (audio.paused){
-		audio.currentTime = 0;
-		audio.play();
-		setTimeout(playAudio(id), delayTime);
+		setTimeout(function play(){
+            audio.currentTime = 0;
+            audio.play();
+        }, delayTime * 4000);
+        //delayTime is one beat, * 4 beats * 1000 for ms
 	}
 	else{
 		audio.pause();
