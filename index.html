@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="audio49.png">
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Localhackday : ">
@@ -13,20 +14,22 @@
     <title>Soundboard</title>
     </head>
     <body>
-    <div id="main_content_wrap" class="outer">
+    <!--<div id="main_content_wrap" class="outer">-->
     <section id="main_content" class="inner">
-        <h1>Insert custom tempo here</h1>
-        <h2>Values in range from 60 to 450 only pls</h2>
+        <img src="audio49.png" alt="speaker">
+        <h1>Looping Soundboard of Uselessness</h1>
+        <h4>Insert tempo here (values in range from 60 to 450 only please)</h4>
         <input type="number" id="userTempo" value="50">
-        
+        <h4>Type in a number then hit <code>ENTER</code> or <code>RETURN</code></h4>
         <div id="continuousMusic">
-        <button type="button" onclick="playAudio('overtime')">overtime</button>
-        <button type="button" onclick="playAudio('how')">i cry</button>
-        <button type="button" onclick="playAudio('eecs')">eecs</button>
+        <h2>Continuous Soundtrack</h2>
+        <button type="button" onclick="playAudio('overtime')">Overtime</button>
+        <button type="button" onclick="playAudio('how')">I Cry</button>
+        <button type="button" onclick="playAudio('eecs')">EECS</button>
         </div>
-        
+        <h2>Accent(s)</h2>
         <div id="beatHits">
-        <button type="button" onclick="playAudio('meme')">nice meme</button>
+        <button type="button" onclick="playAudio('meme')">Nice Meme</button>
         </div> 
         
         <audio>
@@ -51,7 +54,10 @@
                 <source src="audio/nicememe.mp3" type="audio/mp3">
             </audio>
         </div>
+        <div><br>Additional instructions about this project: Click the buttons to play/pause the audio files (we did not fix audio balance issues). Hitting the blue button will periodicially loop you a nice meme!</div>
+        <div><br>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
       </section>
-    </div>    
+    <!--</div>-->
+    
     </body>
 </html>
