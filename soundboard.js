@@ -1,6 +1,20 @@
 var userTempo;
 
 $(document).ready(function(){
+    updatePlayback(); 
+    $('#meme').bind('ended',function(){
+        var timeout = delayTime * 4000;
+        setTimeout(timeout);
+        document.getElementById('meme').play();
+    });
+    $('#userTempo').bind('keypress', function(e){
+        if(e.keyCode == 13){
+            updatePlayback();
+        }
+    });
+});
+
+function updatePlayback(){
     userTempo = document.getElementById("userTempo").value;
     delayTime = 60 / userTempo;
     //Not sure if that works
@@ -9,7 +23,7 @@ $(document).ready(function(){
     for (i = 0; i < audioFiles.length; i++){
         setPlayBackRate(audioFiles[i]);
     }
-});
+}
 
 function playAudio(id){
     var audio = document.getElementById(id);
@@ -28,7 +42,7 @@ function setPlayBackRate(element){
     element.playbackRate = playbackSpeed;
 }
 
-function loopAudio(id){
+/**function loopAudio(id){
 	var audio = document.getElementById(id);
 	if (audio.paused){
 		setTimeout(function play(){
@@ -40,4 +54,4 @@ function loopAudio(id){
 	else{
 		audio.pause();
 	}
-}
+}*/
