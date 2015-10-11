@@ -16,7 +16,7 @@
     <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
         <h1>Insert custom tempo here</h1>
-        <input type="number" id="userTempo" value="120">
+        <input type="number" id="userTempo" value="150">
         
         <div id="continuousMusic">
         <button type="button" onclick="playAudio('overtime')">overtime</button>
@@ -25,7 +25,7 @@
         </div>
         
         <div id="beatHits">
-        <button type="button" onclick="playAudio('meme')">nice meme</button>
+        <button type="button" onclick="loopAudio('meme')">nice meme</button>
         </div> 
         
         <audio>
@@ -33,20 +33,23 @@
         </audio>
         
         <!-- Continuous Music -->
-        <audio loop id="overtime" data-tempo="115">
-            <source src="audio/Overtime.mp3" type="audio/mp3">
-        </audio>
-        <audio loop id="how" data-tempo="94">
-            <source src="audio/how.mp3" type="audio/mp3">
-        </audio>
-        <audio loop id="eecs" data-tempo="143">
-            <source src="audio/eecs.mp3" type="audio/mp3"></source>
-        </audio>
-        
+        <div id="contMusicAudio">
+            <audio loop id="overtime" data-tempo="115">
+                <source src="audio/Overtime.mp3" type="audio/mp3">
+            </audio>
+            <audio loop id="how" data-tempo="94">
+                <source src="audio/how.mp3" type="audio/mp3">
+            </audio>
+            <audio loop id="eecs" data-tempo="143">
+                <source src="audio/eecs.mp3" type="audio/mp3"></source>
+            </audio>
+        </div>
         <!-- Beat hits -->
-        <audio id="meme">
-            <source src="audio/nicememe.mp3" type="audio/mp3">
-        </audio>
+        <div id="beatHitMusicAudio">
+            <audio id="meme">
+                <source src="audio/nicememe.mp3" type="audio/mp3">
+            </audio>
+        </div>
       </section>
     </div>    
     </body>

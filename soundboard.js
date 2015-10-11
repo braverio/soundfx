@@ -1,10 +1,13 @@
+var userTempo;
+
 $(document).ready(function(){
-    var userTempo = document.getElementById("userTempo").getAttribute("value");
+    userTempo = document.getElementById("userTempo").value;
+    delayTime = 60 / userTempo;
     //Not sure if that works
-    var audioFiles = document.getElementById("continuousMusic").children;
+    var audioFiles = document.getElementById("contMusicAudio").children;
     //Or this
-    for (audio in audioFiles){
-        setPlayBackRate(audio);
+    for (i = 0; i < audioFiles.length; i++){
+        setPlayBackRate(audioFiles[i]);
     }
 });
 
@@ -21,6 +24,18 @@ function playAudio(id){
 
 function setPlayBackRate(element){
     var originalTempo = $(element).data('tempo');
-    var playbackSpeed = ulobalTempo/originalTempo;
-    audio.playbackRate = playbackSpeed;
+    var playbackSpeed = userTempo/originalTempo;
+    element.playbackRate = playbackSpeed;
+}
+
+function loopAudio(id){
+	var audio = document.getElementById(id);
+	if (audio.paused){
+		audio.currentTime = 0;
+		audio.play();
+		setTimeout(playAudio(id), delayTime);
+	}
+	else{
+		audio.pause();
+	}
 }
