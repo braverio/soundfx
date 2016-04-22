@@ -4,7 +4,7 @@
     <link rel="icon" href="audio49.png">
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Localhackday : ">
+    <meta name="description" content="Sound FX : ">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -17,20 +17,14 @@
     <!--<div id="main_content_wrap" class="outer">-->
     <section id="main_content" class="inner">
         <img src="audio49.png" alt="speaker">
-        <h1>Looping Soundboard of Uselessness</h1>
-        <h4>Insert tempo here (values in range from 60 to 450 only please)</h4>
-        <input type="number" id="userTempo" value="">
-        <h4>Type in a number then hit <code>ENTER</code> or <code>RETURN</code></h4>
         <div id="continuousMusic">
-        <h2>Continuous Soundtrack</h2>
-        <button type="button" onclick="playAudio('overtime')">Overtime</button>
-        <button type="button" onclick="playAudio('how')">I Cry</button>
-        <button type="button" onclick="playAudio('eecs')">EECS</button>
+        <h2>Sound Effects</h2>
+        <button type="button" onclick="playAudio('rumble')">Hit</button>
+        <button type="button" onclick="playAudio('hit')">Rumble</button>
+        <button type="button" onclick="playAudio('siren')">Siren</button>
         </div>
-        <h2>Accent(s)</h2>
-        <div id="beatHits">
-        <button type="button" onclick="playAudio('meme')">Nice Meme</button>
-        </div> 
+        
+        <div><button type="button" onclick="stopAudio()" id="estop">Emergency Stop</button></div>
         
         <audio>
             Your browser does not support audio tags.
@@ -38,24 +32,17 @@
         
         <!-- Continuous Music -->
         <div id="contMusicAudio">
-            <audio loop id="overtime" data-tempo="115">
-                <source src="audio/Overtime.mp3" type="audio/mp3">
+            <audio id="rumble">
+                <source src="audio/rumble.mp3" type="audio/mp3">
             </audio>
-            <audio loop id="how" data-tempo="94">
-                <source src="audio/how.mp3" type="audio/mp3">
+            <audio id="hit">
+                <source src="audio/hit.mp3" type="audio/mp3">
             </audio>
-            <audio loop id="eecs" data-tempo="143">
-                <source src="audio/eecs.mp3" type="audio/mp3"></source>
-            </audio>
-        </div>
-        <!-- Beat hits -->
-        <div id="beatHitMusicAudio">
-            <audio id="meme">
-                <source src="audio/nicememe.mp3" type="audio/mp3">
+            <audio id="siren">
+                <source src="audio/siren.mp3" type="audio/mp3"></source>
             </audio>
         </div>
-        <div><br>Additional instructions about this project: Click the buttons to play/pause the audio files (we did not fix audio balance issues). Hitting the blue button will periodicially loop you a nice meme!</div>
-        <div><br>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+        
       </section>
     <!--</div>-->
     

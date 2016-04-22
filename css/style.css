@@ -401,6 +401,15 @@ button:hover{
     width: 80%;
 }
 
+button#estop{
+    background: #F00;
+    width: 80%;
+}
+
+button#estop:hover{
+    background: #D00;
+}
+
 #beatHits button:hover{
     background: #1f608c;
     
